@@ -93,5 +93,53 @@ String.prototype.toJadenCase = function() {
 console.log("How can mirrors be real if our eyes aren't real".toJadenCase());
 // Output: "How Can Mirrors Be Real If Our Eyes Aren't Real"
 
-//6.
+//6.Your task is to make two functions ( max and min, or maximum and minimum, etc., depending on the language ) that receive a list of integers as input, and return the largest and lowest number in that list, respectively.
+
+// Examples (Input -> Output)
+// * [4,6,2,1,9,63,-134,566]         -> max = 566, min = -134
+// * [-52, 56, 30, 29, -54, 0, -110] -> min = -110, max = 56
+// * [42, 54, 65, 87, 0]             -> min = 0, max = 87
+// * [5]                             -> min = 5, max = 5
+// Notes
+// You may consider that there will not be any empty arrays/vectors.
+
+Answer. function max(arr){
+  return arr.sort((a,b)=>a-b)[arr.length-1]
+}
+function min(arr){
+  return arr.sort((a,b)=>a-b)[0]
+}
+console.log(max([4,6,2,1,9,63,-134,566] ))
+console.log(min([-52, 56, 30, 29, -54, 0, -110]))
+console.log(max([42, 54, 65, 87, 0] ))
+console.log(min([5]))
+
+
+// 7. Write a function which converts the input string to uppercase.
+
+Answer. function makeUpperCase(str) {
+  // Code here
+  return str.toUpperCase();
+}
+
+console.log(makeUpperCase('avishukla'))
+
+//8.You were camping with your friends far away from home, but when it's time to go back, you realize that your fuel is running out and the nearest pump is 50 miles away! You know that on average, your car runs on about 25 miles per gallon. There are 2 gallons left.
+
+// Considering these factors, write a function that tells you if it is possible to get to the pump or not.
+
+// Function should return true if it is possible and false if not.
+
+Answer.const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+  // TODO
+  if(distanceToPump<= mpg*fuelLeft){
+    return true
+  }else{
+    return false
+  }
+};
+
+console.log(zeroFuel(50,25,2));
+  
+
 
