@@ -157,4 +157,53 @@ function numberToString(num) {
 }
 console.log(numberToString(54));
 
+//10 
+// Code as fast as you can! You need to double the integer and return it.
+
+Answer. function doubleInteger(i) {
+  // i will be an integer. Double it and return it.
+  const double = 2 * i
+  return double;
+}
+
+console.log(doubleInteger(69))
+
+// 11.Consider an array/list of sheep where some sheep may be missing from their place. We need a function that counts the number of sheep present in the array (true means present).
+
+Answer.function countSheeps(sheep) {
+  // TODO
+  sheepcounts = 0
+  for(let sheepInd of sheep){
+    if(sheepInd===true){
+      sheepInd = 1
+      sheepcounts+=1
+    }else{
+      sheepInd = 0
+      sheepcounts+= 0
+    }
+  }
+  return sheepcounts
+}
+console.log(countSheeps([true,  true,  true,  false,
+  true,  true,  true,  true ,
+  true,  false, true,  false,
+  true,  false, false, true ,
+  true,  true,  true,  true ,
+  false, false, true,  true]))
+
+//12.Take 2 strings s1 and s2 including only letters from a to z. Return a new sorted string, the longest possible, containing distinct letters - each taken only once - coming from s1 or s2.
+
+Answer.function longest(s1, s2) {
+  // Combine both strings
+  const combined = s1 + s2;
+  
+  // Remove duplicates and sort the characters
+  const uniqueStr = [...new Set(combined)].sort().join('');
+  
+  return uniqueStr;
+}
+
+// Corrected function call
+console.log(longest("xyaabbbccccdefww", "xxxxyyyyabklmopq"));
+// Expected Output: "abcdefklmopqwxy"
 
